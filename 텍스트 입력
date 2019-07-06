@@ -1,0 +1,14 @@
+void setup(){
+  size(240,120);
+  textSize(64);
+  textAlign(CENTER);
+}
+
+void draw()
+{
+  background(0);
+  text(key,60,80);
+  fill(255);
+  point(60,80);
+
+}
