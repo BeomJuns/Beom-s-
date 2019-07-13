@@ -1,18 +1,22 @@
 int radius=40;
-float x=-radius;
+float x=110;
 float speed=0.5;
-
+int direction=1;
 void setup(){
   size(240,120);
   ellipseMode(RADIUS);
-  frameRate(80);
 }
 
 void draw(){
   background(0);
-  x+=speed;
-  if(x>width+radius){
-    x=-radius;
+  x+=speed*direction;
+  if((x>width-radius)||(x<radius)){
+    direction=-direction;
   }
-  arc(x,60,radius,radius,radians(28),radians(330));
+  if(direction==1){
+    arc(x,60,radius,radius,radians(28),radians(330));
+  }
+  else{
+  arc(x,60,radius,radius,radians(210),radians(510));
+}
 }
